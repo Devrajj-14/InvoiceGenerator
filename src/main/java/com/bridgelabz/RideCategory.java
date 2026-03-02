@@ -1,4 +1,6 @@
 package com.bridgelabz;
 
-public class RideCategory {
+public enum RideCategory {
+    NORMAL,
+    PREMIUM
 }

@@ -56,4 +56,21 @@ class InvoiceGeneratorTest {
         assertEquals(30.0, summary.totalFare, 0.0001);
         assertEquals(15.0, summary.averageFarePerRide, 0.0001);
     }
+    @Test
+    void premiumRide_shouldApplyPremiumMinimumFare() {
+        InvoiceGenerator generator = new InvoiceGenerator();
+        Ride premium = new Ride(0.5, 1, RideCategory.PREMIUM);
+        // fare = 0.5*15 + 1*2 = 9.5 but min premium is 20
+        assertEquals(20.0, generator.calculateFare(premium), 0.0001);
+    }
+
+    @Test
+    void mixedRides_shouldCalculateTotalCorrectly() {
+        InvoiceGenerator generator = new InvoiceGenerator();
+        Ride[] rides = {
+                new Ride(2.0, 5, RideCategory.NORMAL),   // 25
+                new Ride(0.5, 1, RideCategory.PREMIUM)   // min 20
+        };
+        assertEquals(45.0, generator.calculateFare(rides), 0.0001);
+    }
 }

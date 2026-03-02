@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edf5dde5-d2bf-44e1-b341-0637a8b4343a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/InvoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/RideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/RideRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/InvoiceGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/InvoiceGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/RideCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/RideCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/InvoiceGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/InvoiceGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "git-widget-placeholder": "feature/UC4—InvoiceService",
+    "git-widget-placeholder": "feature/UC5—PremiumRides",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/devrajgoswami/InvoiceGenerator ",
     "project.structure.last.edited": "Modules",
