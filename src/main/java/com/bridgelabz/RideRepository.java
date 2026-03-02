@@ -1,4 +1,5 @@
 package com.bridgelabz;
 
-public class RideRepository {
+public interface RideRepository {
+    Ride[] getRides(String userId);
 }
