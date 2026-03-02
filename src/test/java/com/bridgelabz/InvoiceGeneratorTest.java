@@ -42,4 +42,18 @@ class InvoiceGeneratorTest {
         // First ride = 25, second ride = min 5 => total 30
         assertEquals(30.0, total, 0.0001);
     }
+    @Test
+    void givenMultipleRides_shouldReturnInvoiceSummary() {
+        InvoiceGenerator generator = new InvoiceGenerator();
+        Ride[] rides = {
+                new Ride(2.0, 5),  // 25
+                new Ride(0.1, 0)   // 5 (min)
+        };
+
+        InvoiceSummary summary = generator.calculateInvoice(rides);
+
+        assertEquals(2, summary.totalRides);
+        assertEquals(30.0, summary.totalFare, 0.0001);
+        assertEquals(15.0, summary.averageFarePerRide, 0.0001);
+    }
 }

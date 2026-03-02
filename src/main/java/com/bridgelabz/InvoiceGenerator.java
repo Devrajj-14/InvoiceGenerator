@@ -22,4 +22,11 @@ public class InvoiceGenerator {
         }
         return total;
     }
+    public InvoiceSummary calculateInvoice(Ride[] rides) {
+        if (rides == null) throw new IllegalArgumentException("Rides cannot be null");
+        if (rides.length == 0) throw new IllegalArgumentException("At least one ride is required");
+
+        double totalFare = calculateFare(rides);
+        return new InvoiceSummary(rides.length, totalFare);
+    }
 }
