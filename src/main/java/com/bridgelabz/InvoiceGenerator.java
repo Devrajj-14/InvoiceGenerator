@@ -13,4 +13,13 @@ public class InvoiceGenerator {
         double fare = distanceKm * COST_PER_KM_NORMAL + timeMin * COST_PER_MIN_NORMAL;
         return Math.max(fare, MIN_FARE_NORMAL);
     }
+    public double calculateFare(Ride[] rides) {
+        if (rides == null) throw new IllegalArgumentException("Rides cannot be null");
+        double total = 0.0;
+        for (Ride ride : rides) {
+            if (ride == null) throw new IllegalArgumentException("Ride cannot be null");
+            total += calculateFare(ride.distanceKm, ride.timeMin); // UC2 uses normal fare by default
+        }
+        return total;
+    }
 }

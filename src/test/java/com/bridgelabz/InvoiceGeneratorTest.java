@@ -31,4 +31,15 @@ class InvoiceGeneratorTest {
         InvoiceGenerator generator = new InvoiceGenerator();
         assertThrows(IllegalArgumentException.class, () -> generator.calculateFare(1.0, -5));
     }
+    @Test
+    void givenMultipleRides_shouldReturnAggregateFare() {
+        InvoiceGenerator generator = new InvoiceGenerator();
+        Ride[] rides = {
+                new Ride(2.0, 5),
+                new Ride(0.1, 0)
+        };
+        double total = generator.calculateFare(rides);
+        // First ride = 25, second ride = min 5 => total 30
+        assertEquals(30.0, total, 0.0001);
+    }
 }
